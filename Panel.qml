@@ -4,12 +4,13 @@ import QtQuick.Layouts
 import Quickshell
 import Quickshell.Io
 import qs.Commons
+import qs.Commons as Commons
 import qs.Ui
 
 Panel {
   id: root
-  moduleName: "xrs"
-  ipcTarget: "xrs"
+  moduleName: "io.github.mahdjalili.omaxrs"
+  ipcTarget: "io.github.mahdjalili.omaxrs"
   manageIpc: false
 
   property var anchorItem: null
@@ -156,7 +157,7 @@ Panel {
             text: "󰖂"
             font.family: Style.font.family
             font.pixelSize: Style.font.title
-            color: Color.accent
+            color: Commons.Color.accent
           }
 
           Column {
@@ -168,13 +169,13 @@ Panel {
               font.family: Style.font.family
               font.pixelSize: Style.font.caption
               font.bold: true
-              color: root.running ? Color.accent : Qt.darker(Color.popups.text, 1.6)
+              color: root.running ? Commons.Color.accent : Qt.darker(Commons.Color.popups.text, 1.6)
             }
           }
 
           ToggleSwitch {
             checked: root.running
-            accent: Color.accent
+            accent: Commons.Color.accent
             onToggled: root.toggleProxy()
           }
         }
@@ -183,8 +184,8 @@ Panel {
         BorderSurface {
           width: parent.width
           radius: Style.cornerRadius
-          color: Style.hoverFillFor(Color.accent, Color.accent)
-          borderSpec: Border.controlSpec("normal", Color.popups.border, Color.accent)
+          color: Style.hoverFillFor(Commons.Color.accent, Commons.Color.accent)
+          borderSpec: Border.controlSpec("normal", Commons.Color.popups.border, Commons.Color.accent)
           implicitHeight: heroCol.implicitHeight + Style.space(14)
 
           Column {
@@ -200,7 +201,7 @@ Panel {
                 text: "Active:"
                 font.family: Style.font.family
                 font.pixelSize: Style.font.caption
-                color: Qt.darker(Color.popups.text, 1.3)
+                color: Qt.darker(Commons.Color.popups.text, 1.3)
               }
 
               Text {
@@ -208,7 +209,7 @@ Panel {
                 font.family: Style.font.family
                 font.pixelSize: Style.font.body
                 font.bold: true
-                color: Color.accent
+                color: Commons.Color.accent
                 elide: Text.ElideRight
                 Layout.fillWidth: true
               }
@@ -221,7 +222,7 @@ Panel {
                 text: "TUN Mode:"
                 font.family: Style.font.family
                 font.pixelSize: Style.font.caption
-                color: Qt.darker(Color.popups.text, 1.3)
+                color: Qt.darker(Commons.Color.popups.text, 1.3)
               }
 
               Text {
@@ -229,7 +230,7 @@ Panel {
                 font.family: Style.font.family
                 font.pixelSize: Style.font.caption
                 font.bold: true
-                color: root.tunEnabled ? Color.accent : Qt.darker(Color.popups.text, 1.6)
+                color: root.tunEnabled ? Commons.Color.accent : Qt.darker(Commons.Color.popups.text, 1.6)
               }
 
               Item { Layout.fillWidth: true }
@@ -238,7 +239,7 @@ Panel {
                 text: root.tunEnabled ? "[Switch to System Proxy]" : "[Enable TUN Mode]"
                 font.family: Style.font.family
                 font.pixelSize: Style.font.caption * 0.9
-                color: Color.accent
+                color: Commons.Color.accent
               }
 
               MouseArea {
@@ -255,7 +256,7 @@ Panel {
                 text: "Rules:"
                 font.family: Style.font.family
                 font.pixelSize: Style.font.caption
-                color: Qt.darker(Color.popups.text, 1.3)
+                color: Qt.darker(Commons.Color.popups.text, 1.3)
               }
 
               Text {
@@ -263,7 +264,7 @@ Panel {
                 font.family: Style.font.family
                 font.pixelSize: Style.font.caption
                 font.bold: true
-                color: Color.accent
+                color: Commons.Color.accent
                 elide: Text.ElideRight
                 Layout.fillWidth: true
               }
@@ -311,10 +312,10 @@ Panel {
               implicitHeight: Style.space(36)
               radius: Style.cornerRadius
               color: nodeMouse.containsMouse
-                ? Style.hoverFillFor(Color.accent, Color.accent)
-                : (modelData.is_active ? Style.selectedFillFor(Color.accent, Color.accent) : "transparent")
+                ? Style.hoverFillFor(Commons.Color.accent, Commons.Color.accent)
+                : (modelData.is_active ? Style.selectedFillFor(Commons.Color.accent, Commons.Color.accent) : "transparent")
               borderSpec: modelData.is_active
-                ? Border.controlSpec("focus", Color.accent, Color.accent)
+                ? Border.controlSpec("focus", Commons.Color.accent, Commons.Color.accent)
                 : Border.none()
 
               RowLayout {
@@ -328,15 +329,15 @@ Panel {
                   width: Style.space(12)
                   height: Style.space(12)
                   radius: Style.space(6)
-                  color: modelData.is_active ? Color.accent : "transparent"
-                  border.color: modelData.is_active ? Color.accent : Qt.darker(Color.popups.text, 1.6)
+                  color: modelData.is_active ? Commons.Color.accent : "transparent"
+                  border.color: modelData.is_active ? Commons.Color.accent : Qt.darker(Commons.Color.popups.text, 1.6)
                   border.width: 1.5
                 }
 
                 // Protocol badge
                 BorderSurface {
                   radius: Style.space(4)
-                  color: Style.hoverFillFor(Color.accent, Color.accent)
+                  color: Style.hoverFillFor(Commons.Color.accent, Commons.Color.accent)
                   implicitWidth: protoTxt.implicitWidth + Style.space(6)
                   implicitHeight: Style.space(16)
 
@@ -347,7 +348,7 @@ Panel {
                     font.family: Style.font.family
                     font.pixelSize: Style.font.caption * 0.9
                     font.bold: true
-                    color: Color.accent
+                    color: Commons.Color.accent
                   }
                 }
 
@@ -357,7 +358,7 @@ Panel {
                   font.family: Style.font.family
                   font.pixelSize: Style.font.body
                   font.bold: modelData.is_active
-                  color: modelData.is_active ? Color.accent : Color.popups.text
+                  color: modelData.is_active ? Commons.Color.accent : Commons.Color.popups.text
                   elide: Text.ElideRight
                   Layout.fillWidth: true
                 }
@@ -368,7 +369,7 @@ Panel {
                   font.family: Style.font.family
                   font.pixelSize: Style.font.caption
                   font.bold: true
-                  color: modelData.ping_ms > 0 ? Color.accent : Qt.darker(Color.popups.text, 1.8)
+                  color: modelData.ping_ms > 0 ? Commons.Color.accent : Qt.darker(Commons.Color.popups.text, 1.8)
                 }
               }
 
@@ -389,7 +390,7 @@ Panel {
             text: "No proxy nodes configured.\nRun 'xrs node add <link>' or open TUI."
             font.family: Style.font.family
             font.pixelSize: Style.font.caption
-            color: Qt.darker(Color.popups.text, 1.5)
+            color: Qt.darker(Commons.Color.popups.text, 1.5)
             horizontalAlignment: Text.AlignHCenter
             width: parent.width
             topPadding: Style.space(8)
@@ -417,19 +418,19 @@ Panel {
             Layout.fillWidth: true
             implicitHeight: Style.space(30)
             radius: Style.cornerRadius
-            color: pingMouse.containsMouse ? Style.hoverFillFor(Color.accent, Color.accent) : "transparent"
-            borderSpec: Border.controlSpec("normal", Color.popups.border, Color.accent)
+            color: pingMouse.containsMouse ? Style.hoverFillFor(Commons.Color.accent, Commons.Color.accent) : "transparent"
+            borderSpec: Border.controlSpec("normal", Commons.Color.popups.border, Commons.Color.accent)
 
             RowLayout {
               anchors.centerIn: parent
               spacing: Style.space(4)
-              Text { text: "󰓅"; font.family: Style.font.family; font.pixelSize: Style.font.caption; color: Color.accent }
+              Text { text: "󰓅"; font.family: Style.font.family; font.pixelSize: Style.font.caption; color: Commons.Color.accent }
               Text {
                 text: "Ping"
                 font.family: Style.font.family
                 font.pixelSize: Style.font.caption
                 font.bold: true
-                color: Color.popups.text
+                color: Commons.Color.popups.text
               }
             }
 
@@ -446,19 +447,19 @@ Panel {
             Layout.fillWidth: true
             implicitHeight: Style.space(30)
             radius: Style.cornerRadius
-            color: updateMouse.containsMouse ? Style.hoverFillFor(Color.accent, Color.accent) : "transparent"
-            borderSpec: Border.controlSpec("normal", Color.popups.border, Color.accent)
+            color: updateMouse.containsMouse ? Style.hoverFillFor(Commons.Color.accent, Commons.Color.accent) : "transparent"
+            borderSpec: Border.controlSpec("normal", Commons.Color.popups.border, Commons.Color.accent)
 
             RowLayout {
               anchors.centerIn: parent
               spacing: Style.space(4)
-              Text { text: "󰑓"; font.family: Style.font.family; font.pixelSize: Style.font.caption; color: Color.accent }
+              Text { text: "󰑓"; font.family: Style.font.family; font.pixelSize: Style.font.caption; color: Commons.Color.accent }
               Text {
                 text: "Update"
                 font.family: Style.font.family
                 font.pixelSize: Style.font.caption
                 font.bold: true
-                color: Color.popups.text
+                color: Commons.Color.popups.text
               }
             }
 
@@ -475,19 +476,19 @@ Panel {
             Layout.fillWidth: true
             implicitHeight: Style.space(30)
             radius: Style.cornerRadius
-            color: tuiMouse.containsMouse ? Style.hoverFillFor(Color.accent, Color.accent) : "transparent"
-            borderSpec: Border.controlSpec("normal", Color.popups.border, Color.accent)
+            color: tuiMouse.containsMouse ? Style.hoverFillFor(Commons.Color.accent, Commons.Color.accent) : "transparent"
+            borderSpec: Border.controlSpec("normal", Commons.Color.popups.border, Commons.Color.accent)
 
             RowLayout {
               anchors.centerIn: parent
               spacing: Style.space(4)
-              Text { text: ""; font.family: Style.font.family; font.pixelSize: Style.font.caption; color: Color.accent }
+              Text { text: ""; font.family: Style.font.family; font.pixelSize: Style.font.caption; color: Commons.Color.accent }
               Text {
                 text: "TUI"
                 font.family: Style.font.family
                 font.pixelSize: Style.font.caption
                 font.bold: true
-                color: Color.popups.text
+                color: Commons.Color.popups.text
               }
             }
 
@@ -511,7 +512,7 @@ Panel {
           font.family: Style.font.family
           font.pixelSize: Style.font.caption
           font.bold: true
-          color: Color.accent
+          color: Commons.Color.accent
           horizontalAlignment: Text.AlignHCenter
           width: parent.width
         }

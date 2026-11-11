@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "id": "xrs",
-  "name": "Proxy",
+  "id": "io.github.mahdjalili.omaxrs",
+  "name": "omaxrs",
   "version": "1.0.0",
   "author": "Mahdi",
   "license": "MIT",
-  "description": "An xray cli-first ultra fast lightweight client",
+  "description": "Omarchy bar controls for the xrs Xray proxy client.",
   "kinds": [
     "bar-widget"
   ],
@@ -13,8 +13,8 @@
     "barWidget": "BarWidget.qml"
   },
   "barWidget": {
-    "displayName": "Proxy",
-    "description": "an xray cli-first ultra fast lightweight client",
+    "displayName": "omaxrs",
+    "description": "Omarchy bar controls for the xrs Xray proxy client.",
     "category": "Network",
     "allowMultiple": false,
     "defaultSection": "right"

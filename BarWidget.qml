@@ -5,7 +5,7 @@ import qs.Ui
 
 BarWidget {
   id: root
-  moduleName: "xrs"
+  moduleName: "io.github.mahdjalili.omaxrs"
 
   function injectPanel() {
     var target = panelLoader.item

@@ -15,24 +15,68 @@ This project was extracted from the `plugin/` directory of xrs. The plugin is ma
 ## Requirements
 
 - [xrs](https://github.com/mahdjalili/xrs) installed and available on the desktop session's `PATH`, with proxy nodes configured.
-- An Omarchy Quickshell bar with a compatible plugin host providing the `qs.Commons` and `qs.Ui` modules used by this plugin.
+- Omarchy Quattro with its Quickshell plugin host (`qs.Commons` and `qs.Ui`). These QML files are not a standalone Quickshell application.
 - `foot` for the panel's **TUI** action.
 
-The plugin uses the xrs CLI, including `xrs status --json`, to read status and perform actions. It does not bundle xrs or Xray-core.
+The plugin uses the xrs CLI, including `xrs status --json`, to read status and perform actions. It does not bundle or install xrs or Xray-core. Install and configure xrs using its [upstream instructions](https://github.com/mahdjalili/xrs) before enabling this widget. TUN support and any required privileges are managed by xrs, not by this plugin.
 
 ## Installation
 
-Clone this repository:
+On an Omarchy desktop, run:
+
+```bash
+omarchy plugin add https://github.com/mahdjalili/omaxrs.git --enable
+```
+
+The widget is named **omaxrs** and defaults to the right bar section. Its plugin ID is `io.github.mahdjalili.omaxrs`.
+
+Left-click the widget to open its panel; right-click to connect or disconnect. The panel provides server selection, TUN switching, latency tests, subscription updates, and the xrs TUI.
+
+### Migrating from the old `xrs` plugin ID
+
+Before installing this version, disable the previous widget to avoid duplicate widgets and status polling:
+
+```bash
+omarchy plugin disable xrs
+```
+
+If the old plugin was installed through Omarchy's plugin manager, remove it with `omarchy plugin remove xrs`. For a manually installed copy, back it up and remove it using the original installation procedure. Then install omaxrs with the command above. The new ID has its own bar placement; existing `xrs` widget settings are not migrated automatically. The xrs client and its configuration are unaffected by this ID change.
+
+## Update
+
+```bash
+omarchy plugin update io.github.mahdjalili.omaxrs
+```
+
+## Disable or remove
+
+```bash
+# Hide the widget while keeping the plugin installed.
+omarchy plugin disable io.github.mahdjalili.omaxrs
+
+# Disable and remove the plugin checkout.
+omarchy plugin remove io.github.mahdjalili.omaxrs
+```
+
+Removing the widget does not stop an active xrs connection or remove xrs, Xray-core, subscriptions, or client configuration. Disconnect using the widget or xrs before removal if needed.
+
+## Troubleshooting
+
+If the widget has no status or nodes, run `xrs status --json` in a terminal and confirm that xrs is installed, configured, and available on the desktop session's `PATH`. If the TUI action does not open, confirm that `foot` is installed. Client connection and TUN errors should be diagnosed with xrs directly.
+
+## Development
+
+Clone the repository and validate its manifest on an Omarchy system:
 
 ```bash
 git clone https://github.com/mahdjalili/omaxrs.git
+cd omaxrs
+omarchy plugin validate .
 ```
 
-Install the repository's contents into your bar's plugin directory using your plugin host's installation procedure, then enable the **Proxy** widget. Keep `manifest.json`, `BarWidget.qml`, and `Panel.qml` together. The plugin ID remains `xrs` for compatibility with existing bar configurations; if your host requires directory names to match plugin IDs, use `xrs` as the installed directory name.
+Validation checks the manifest and entry points; it does not exercise the QML or xrs integration. Before release, test the widget on a running Omarchy desktop: status, panel opening/closing, connect/disconnect, server selection, TUN switching, latency tests, subscription updates, TUI launch, and removal.
 
-The required UI components come from the bar's plugin host; these QML files are not a standalone Quickshell application.
-
-To update a Git-based installation, run `git pull --ff-only` in its checkout and reload the plugin using your bar's usual procedure.
+Marketplace submission preparation and the draft issue body are in [SUBMISSION.md](SUBMISSION.md) and [docs/marketplace-submission.md](docs/marketplace-submission.md).
 
 ## Files
 
