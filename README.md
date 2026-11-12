@@ -66,11 +66,9 @@ If the widget has no status or nodes, run `xrs status --json` in a terminal and 
 
 ## Development
 
-Clone the repository and validate its manifest on an Omarchy system:
+From the repository directory, validate its manifest on an Omarchy system:
 
 ```bash
-git clone https://github.com/mahdjalili/omaxrs.git
-cd omaxrs
 omarchy plugin validate .
 ```
 
