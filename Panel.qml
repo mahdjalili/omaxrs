@@ -206,6 +206,7 @@ Panel {
 
               Text {
                 text: root.activeNode
+                textFormat: Text.PlainText
                 font.family: Style.font.family
                 font.pixelSize: Style.font.body
                 font.bold: true
@@ -261,6 +262,7 @@ Panel {
 
               Text {
                 text: root.rulesSummary.length > 0 ? root.rulesSummary : "None"
+                textFormat: Text.PlainText
                 font.family: Style.font.family
                 font.pixelSize: Style.font.caption
                 font.bold: true
@@ -345,6 +347,7 @@ Panel {
                     id: protoTxt
                     anchors.centerIn: parent
                     text: modelData.protocol || "VLESS"
+                    textFormat: Text.PlainText
                     font.family: Style.font.family
                     font.pixelSize: Style.font.caption * 0.9
                     font.bold: true
@@ -355,6 +358,7 @@ Panel {
                 // Node Name
                 Text {
                   text: modelData.name || "Unnamed"
+                  textFormat: Text.PlainText
                   font.family: Style.font.family
                   font.pixelSize: Style.font.body
                   font.bold: modelData.is_active
@@ -366,6 +370,7 @@ Panel {
                 // Ping Latency
                 Text {
                   text: modelData.ping_ms > 0 ? (modelData.ping_ms + "ms") : "---"
+                  textFormat: Text.PlainText
                   font.family: Style.font.family
                   font.pixelSize: Style.font.caption
                   font.bold: true
@@ -509,6 +514,7 @@ Panel {
         Text {
           visible: root.statusMsg.length > 0
           text: root.statusMsg
+          textFormat: Text.PlainText
           font.family: Style.font.family
           font.pixelSize: Style.font.caption
           font.bold: true

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "io.github.mahdjalili.omaxrs",
   "name": "omaxrs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Mahdi",
   "license": "MIT",
   "description": "Omarchy bar controls for the xrs Xray proxy client.",
