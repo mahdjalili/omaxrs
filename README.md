@@ -123,19 +123,6 @@ omarchy plugin validate .
 
 This checks the manifest and entry points. Before release, test the integration on a running Omarchy desktop: connection status, panel opening and closing, connect/disconnect, server selection, TUN switching, latency tests, subscription refresh, TUI launch, and removal.
 
-### Repository layout
-
-| File | Purpose |
-| --- | --- |
-| [manifest.json](manifest.json) | Plugin metadata and bar widget entry point. |
-| [BarWidget.qml](BarWidget.qml) | Bar button and panel loader. |
-| [Panel.qml](Panel.qml) | Proxy controls and xrs CLI integration. |
-| [logo.png](logo.png) | Shared xrs/omaxrs logo used in this README. |
-| [preview.png](preview.png) | Root marketplace banner with the logo and plugin UI. |
-| [assets/panel.png](assets/panel.png) | Original, unmodified panel screenshot. |
-
-See the [official publishing guide](https://plugins.omarchy.org/publish.html) for marketplace asset conventions and publishing preparation.
-
 ## License
 
 [MIT](LICENSE)
