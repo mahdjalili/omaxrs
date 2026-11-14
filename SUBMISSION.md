@@ -4,6 +4,18 @@ Issue title: **[Plugin]: omaxrs**
 
 The draft issue body is [docs/marketplace-submission.md](docs/marketplace-submission.md). Its category is `System`, with tags `bar`, `vpn`, and `quickshell`. The widget category `Network` in the manifest is a separate bar-host category.
 
+## Preview and logo assets
+
+Following the [official submission requirements](https://github.com/omacom/omarchy-plugin-marketplace/blob/main/SUBMISSION.md#check-the-repository):
+
+- Keep the UI screenshot at repository-root `preview.png`, beside `manifest.json`. The marketplace discovers it automatically; no manifest entry is needed.
+- Keep only one marketplace preview. Supported names are `preview.png`, `preview.jpg`, `preview.jpeg`, `preview.webp`, and `preview.avif`.
+- The marketplace strips metadata and generates optimized card and detail images. Inputs must not exceed 50 MB or 40 megapixels; normal screenshots need no manual resizing or compression.
+
+The shared xrs/omaxrs logo is `logo.png`, referenced by the README. The current marketplace has no separate logo discovery convention, and the Omarchy manifest reference defines no logo field. It is not the marketplace preview and does not configure the runtime bar icon.
+
+## Submission steps
+
 Before submitting:
 
 1. Run `omarchy plugin validate .` and complete the desktop checks in the README on the version being published.
