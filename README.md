@@ -1,8 +1,14 @@
 # omaxrs
 
+<img src="logo.png" alt="xrs and omaxrs plugin logo" width="200" />
+
 The Omarchy bar plugin for [xrs](https://github.com/mahdjalili/xrs), a lightweight Xray proxy client.
 
 This project was extracted from the `plugin/` directory of xrs. The plugin is maintained here; the proxy client remains in the xrs repository.
+
+## UI preview
+
+![omaxrs proxy panel showing connection status, server selection, and latency](preview.png)
 
 ## Features
 
@@ -81,6 +87,8 @@ Marketplace submission preparation and the draft issue body are in [SUBMISSION.m
 - `manifest.json`: plugin metadata and bar widget entry point.
 - `BarWidget.qml`: bar button and panel loader.
 - `Panel.qml`: proxy controls and xrs CLI integration.
+- `logo.png`: shared xrs and omaxrs plugin logo.
+- `preview.png`: example of the plugin UI.
 
 ## License
 
