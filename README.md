@@ -22,11 +22,11 @@
 ## Preview
 
 <p align="center">
-  <img src="preview.png" alt="omaxrs panel with connection status, routing rules, server selection, and latency results" width="379" />
+  <img src="preview.png" alt="omaxrs marketplace banner with the xrs logo and proxy panel" width="960" />
 </p>
 
 <p align="center">
-  <sub>Connection status, server selection, and latency results in the proxy panel.</sub>
+  <sub>xrs controls for the Omarchy bar · <a href="docs/images/panel.png">View the original panel screenshot</a></sub>
 </p>
 
 ## Features
@@ -131,7 +131,8 @@ This checks the manifest and entry points. Before release, test the integration 
 | [BarWidget.qml](BarWidget.qml) | Bar button and panel loader. |
 | [Panel.qml](Panel.qml) | Proxy controls and xrs CLI integration. |
 | [logo.png](logo.png) | Shared xrs/omaxrs logo used in this README. |
-| [preview.png](preview.png) | Root UI screenshot discovered automatically by the marketplace. |
+| [preview.png](preview.png) | Root marketplace banner with the logo and plugin UI. |
+| [docs/images/panel.png](docs/images/panel.png) | Original, unmodified panel screenshot. |
 
 See [SUBMISSION.md](SUBMISSION.md) for marketplace asset conventions and publishing preparation, and [docs/marketplace-submission.md](docs/marketplace-submission.md) for the draft submission body.
 

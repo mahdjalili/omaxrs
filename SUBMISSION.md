@@ -8,7 +8,7 @@ The draft issue body is [docs/marketplace-submission.md](docs/marketplace-submis
 
 Following the [official submission requirements](https://github.com/omacom/omarchy-plugin-marketplace/blob/main/SUBMISSION.md#check-the-repository):
 
-- Keep the UI screenshot at repository-root `preview.png`, beside `manifest.json`. The marketplace discovers it automatically; no manifest entry is needed.
+- Keep the banner with the logo and UI screenshot at repository-root `preview.png`, beside `manifest.json`. The marketplace discovers it automatically; no manifest entry is needed. The original screenshot is preserved separately at `docs/images/panel.png`.
 - Keep only one marketplace preview. Supported names are `preview.png`, `preview.jpg`, `preview.jpeg`, `preview.webp`, and `preview.avif`.
 - The marketplace strips metadata and generates optimized card and detail images. Inputs must not exceed 50 MB or 40 megapixels; normal screenshots need no manual resizing or compression.
 
@@ -19,7 +19,7 @@ The shared xrs/omaxrs logo is `logo.png`, referenced by the README. The current 
 Before submitting:
 
 1. Run `omarchy plugin validate .` and complete the desktop checks in the README on the version being published.
-2. Review the panel screenshot in root `preview.png` before publishing. Do not include subscription URLs, credentials, or private server details.
+2. Review the marketplace banner in root `preview.png` before publishing. Do not include subscription URLs, credentials, or private server details.
 3. Commit and push the prepared version to the public repository. Marketplace validation reads the public repository, not this checkout.
 4. Recheck that `io.github.mahdjalili.omaxrs` is available. It was absent from the marketplace registry during preparation; IDs are permanent and availability is not reserved.
 5. Review the draft body, confirm all five checklist statements, and change the checkboxes to `[x]` only when true. Ownership and permission must be confirmed by the owner.
