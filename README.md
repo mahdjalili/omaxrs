@@ -26,7 +26,7 @@
 </p>
 
 <p align="center">
-  <sub>xrs controls for the Omarchy bar · <a href="docs/images/panel.png">View the original panel screenshot</a></sub>
+  <sub>xrs controls for the Omarchy bar · <a href="assets/panel.png">View the original panel screenshot</a></sub>
 </p>
 
 ## Features
@@ -132,9 +132,9 @@ This checks the manifest and entry points. Before release, test the integration 
 | [Panel.qml](Panel.qml) | Proxy controls and xrs CLI integration. |
 | [logo.png](logo.png) | Shared xrs/omaxrs logo used in this README. |
 | [preview.png](preview.png) | Root marketplace banner with the logo and plugin UI. |
-| [docs/images/panel.png](docs/images/panel.png) | Original, unmodified panel screenshot. |
+| [assets/panel.png](assets/panel.png) | Original, unmodified panel screenshot. |
 
-See [SUBMISSION.md](SUBMISSION.md) for marketplace asset conventions and publishing preparation, and [docs/marketplace-submission.md](docs/marketplace-submission.md) for the draft submission body.
+See the [official publishing guide](https://plugins.omarchy.org/publish.html) for marketplace asset conventions and publishing preparation.
 
 ## License
 
